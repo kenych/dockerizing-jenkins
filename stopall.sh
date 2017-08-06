@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker stop mysonar myjenkins
+docker stop mysonar myjenkins artifactory

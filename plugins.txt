@@ -70,3 +70,4 @@ subversion
 ssh-slaves
 email-ext
 cobertura
+config-file-provider
