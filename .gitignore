@@ -1,5 +1,5 @@
 downloads/
-m2deps/
+m2deps/*
 jobs/maze-explorer/builds/
 jobs/maze-explorer/cobertura/
 jobs/maze-explorer/lastStable

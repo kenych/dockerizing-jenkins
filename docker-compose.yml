@@ -1,0 +1,35 @@
+version: "3.1"
+
+services:
+  myjenkins:
+    build:
+      context: .
+    image: myjenkins
+    ports:
+     - "8080:8080"
+    depends_on:
+     - mysonar
+     - artifactory
+    links:
+      - mysonar
+      - artifactory
+    volumes:
+     - "./jobs:/var/jenkins_home/jobs/"
+     - "./m2deps:/var/jenkins_home/.m2/repository/"
+     - "./downloads:/var/jenkins_home/downloads"
+    secrets:
+     - artifactoryPassword
+  mysonar:
+    image: sonarqube:6.3.1
+    ports:
+     - "9000"
+  artifactory:
+    image: docker.bintray.io/jfrog/artifactory-oss:5.4.4
+    ports:
+     - "8081"
+
+secrets:
+  artifactoryPassword:
+    file: ./secrets/artifactoryPassword
+
+
