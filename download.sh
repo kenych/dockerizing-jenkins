@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#clean anything with same name to get rid of clashes
+docker-compose down
+
 docker pull jenkins:2.60.1
 docker pull sonarqube:6.3.1
 docker pull docker.bintray.io/jfrog/artifactory-oss:5.4.4
