@@ -1,4 +1,3 @@
-downloads/
 m2deps/*
 jobs/maze-explorer/builds/
 jobs/maze-explorer/cobertura/
@@ -6,3 +5,4 @@ jobs/maze-explorer/lastStable
 jobs/maze-explorer/lastSuccessful
 jobs/maze-explorer/nextBuildNumber
 jobs/maze-explorer/workspace*
+es_data

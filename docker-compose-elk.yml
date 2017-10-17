@@ -13,12 +13,15 @@ services:
      - elasticsearch
 
   elasticsearch:
-     image: elasticsearch:2
+     image: elasticsearch:5.5.2
      ports:
       - "9200:9200"
+     volumes:
+      - "./es_data/es_data:/usr/share/elasticsearch/data/"
+
 
   kibana:
-    image: kibana:4
+    image: kibana:5
     ports:
      - "5601:5601"
     links:
